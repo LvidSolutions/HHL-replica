@@ -51,7 +51,7 @@ export default async function ProjectPage({ params }: Props) {
       <section className="project-gallery" aria-label={`${meta.title} images`}>
         {gallery.map((image, imageIndex) => (
           <figure className="project-image" key={`${image}-${imageIndex}`}>
-            <Image src={image} alt={`${meta.title} ${imageIndex + 1}`} width={1800} height={1200} priority={imageIndex === 0} sizes="(max-width: 900px) 100vw, 82vw" />
+            <img src={image} alt={`${meta.title} ${imageIndex + 1}`} loading={imageIndex === 0 ? "eager" : "lazy"} />
           </figure>
         ))}
       </section>
