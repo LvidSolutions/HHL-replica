@@ -4,13 +4,13 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "HERMANSSON HILLER LUNDBERG",
-  description: "Visual portfolio replica for Hermansson Hiller Lundberg.",
+  description: "Hermansson Hiller Lundberg architecture practice and project archive.",
 };
 
 function Header() {
   return (
     <header className="site-header">
-      <Link href="/" className="brand" aria-label="Home">
+      <Link href="/" className="brand" aria-label="HERMANSSON HILLER LUNDBERG">
         HERMANSSON HILLER LUNDBERG
       </Link>
       <nav className="site-nav" aria-label="Main navigation">
