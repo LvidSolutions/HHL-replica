@@ -3,16 +3,21 @@ import Link from "next/link";
 import { galleryImages, getProjectMeta, projectNumber, projects } from "../lib/projects";
 
 export default function Home() {
-  const featured = projects[0];
-  const meta = getProjectMeta(featured.slug);
-  const [image] = galleryImages(featured);
-
   return (
     <main className="home-page">
-      <Link className="home-hero" href={`/projects/${featured.slug}`} aria-label={meta.title}>
-        <Image src={image} alt={meta.title} fill sizes="100vw" priority />
-        <span className="home-counter">{projectNumber(featured.slug, 0)}</span>
-      </Link>
+      <section className="home-scroll">
+        {projects.map((project, index) => {
+          const meta = getProjectMeta(project.slug);
+          const image = galleryImages(project)[0];
+
+          return (
+            <Link className="home-hero" href={`/projects/${project.slug}`} key={project.slug}>
+              <Image src={image} alt={meta.title} fill sizes="100vw" priority={index === 0} />
+              <span className="home-counter">{projectNumber(project.slug, index)}</span>
+            </Link>
+          );
+        })}
+      </section>
     </main>
   );
 }
