@@ -19,6 +19,11 @@ export type ProjectMeta = {
   number?: string;
 };
 
+export type ArchiveImage = {
+  src: string;
+  project: Project;
+};
+
 export const projects = projectsRaw as Project[];
 
 export const projectMeta: Record<string, ProjectMeta> = {
@@ -289,6 +294,21 @@ export function galleryImages(project: Project) {
   const meta = getProjectMeta(project.slug);
   const count = meta.galleryCount ?? Math.max(1, project.images.length - 2);
   return project.images.slice(0, count);
+}
+
+export function archiveImages() {
+  const seen = new Set<string>();
+  const images: ArchiveImage[] = [];
+
+  for (const project of projects) {
+    for (const src of project.images) {
+      if (seen.has(src)) continue;
+      seen.add(src);
+      images.push({ src, project });
+    }
+  }
+
+  return images;
 }
 
 export function relatedProjects(slug: string, limit = 2) {
