@@ -1,0 +1,219 @@
+[
+  {
+    "slug": "goteborgs-konstmuseum",
+    "url": "https://www.hhl.se/projects/goteborgs-konstmuseum/",
+    "images": [
+      "/projects/goteborgs-konstmuseum/ccc.jpg",
+      "/projects/goteborgs-konstmuseum/bbb.jpg",
+      "/projects/goteborgs-konstmuseum/ddd.jpg",
+      "/projects/goteborgs-konstmuseum/eee.jpg",
+      "/projects/goteborgs-konstmuseum/fff.jpg",
+      "/projects/goteborgs-konstmuseum/ggg.jpg",
+      "/projects/goteborgs-konstmuseum/aaa.jpg",
+      "/projects/goteborgs-konstmuseum/tr-01.jpg",
+      "/projects/goteborgs-konstmuseum/ko-01.jpg"
+    ]
+  },
+  {
+    "slug": "karrtorp",
+    "url": "https://www.hhl.se/projects/karrtorp/",
+    "images": [
+      "/projects/karrtorp/tr-01.jpg",
+      "/projects/karrtorp/tr-02.jpg",
+      "/projects/karrtorp/tr-05.jpg",
+      "/projects/karrtorp/tr-03.jpg",
+      "/projects/karrtorp/tr-04.jpg",
+      "/projects/karrtorp/HHL-NO4-02.jpg",
+      "/projects/karrtorp/sp-01.jpg"
+    ]
+  },
+  {
+    "slug": "no4",
+    "url": "https://www.hhl.se/projects/no4/",
+    "images": [
+      "/projects/no4/HHL-NO4-02.jpg",
+      "/projects/no4/HHL-NO4-09.jpg",
+      "/projects/no4/HHL-NO4-11.jpg",
+      "/projects/no4/HHL-NO4-08.jpg",
+      "/projects/no4/HHL-NO4-04.jpg",
+      "/projects/no4/r-01.jpg",
+      "/projects/no4/tr-01.jpg"
+    ]
+  },
+  {
+    "slug": "rodeby",
+    "url": "https://www.hhl.se/projects/rodeby/",
+    "images": [
+      "/projects/rodeby/r-01.jpg",
+      "/projects/rodeby/r-02.jpg",
+      "/projects/rodeby/r-03.jpg",
+      "/projects/rodeby/r-04.jpg",
+      "/projects/rodeby/r-05.jpg",
+      "/projects/rodeby/BARKARBY-13.jpg",
+      "/projects/rodeby/tr-01.jpg"
+    ]
+  },
+  {
+    "slug": "sporrsmeden",
+    "url": "https://www.hhl.se/projects/sporrsmeden/",
+    "images": [
+      "/projects/sporrsmeden/sp-01.jpg",
+      "/projects/sporrsmeden/sp-02.jpg",
+      "/projects/sporrsmeden/sp-03.jpg",
+      "/projects/sporrsmeden/sp-04.jpg",
+      "/projects/sporrsmeden/sp-05.jpg",
+      "/projects/sporrsmeden/eld-01.jpg",
+      "/projects/sporrsmeden/tr-01.jpg"
+    ]
+  },
+  {
+    "slug": "eldstaden",
+    "url": "https://www.hhl.se/projects/eldstaden/",
+    "images": [
+      "/projects/eldstaden/eld-01.jpg",
+      "/projects/eldstaden/eld-02.jpg",
+      "/projects/eldstaden/eld-03.jpg",
+      "/projects/eldstaden/eld-04.jpg",
+      "/projects/eldstaden/eld-05.jpg",
+      "/projects/eldstaden/tr-01.jpg",
+      "/projects/eldstaden/HHL-NO4-02.jpg"
+    ]
+  },
+  {
+    "slug": "kompisen",
+    "url": "https://www.hhl.se/projects/kompisen/",
+    "images": [
+      "/projects/kompisen/ko-01.jpg",
+      "/projects/kompisen/ko-02.jpg",
+      "/projects/kompisen/ko-03.jpg",
+      "/projects/kompisen/ko-04.jpg",
+      "/projects/kompisen/ko-05.jpg",
+      "/projects/kompisen/sp-01.jpg",
+      "/projects/kompisen/eld-01.jpg"
+    ]
+  },
+  {
+    "slug": "ekilla",
+    "url": "https://www.hhl.se/projects/ekilla/",
+    "images": [
+      "/projects/ekilla/ek-01.jpg",
+      "/projects/ekilla/ek-02.jpg",
+      "/projects/ekilla/ek-03.jpg",
+      "/projects/ekilla/ek-04.jpg",
+      "/projects/ekilla/tr-01.jpg",
+      "/projects/ekilla/HHL-NO4-02.jpg"
+    ]
+  },
+  {
+    "slug": "froso-park-hotell",
+    "url": "https://www.hhl.se/projects/froso-park-hotell/",
+    "images": [
+      "/projects/froso-park-hotell/HHL-FPH-003.jpg",
+      "/projects/froso-park-hotell/HHL-FPH-001.jpg",
+      "/projects/froso-park-hotell/HHL-FPH-004.jpg",
+      "/projects/froso-park-hotell/tr-01.jpg",
+      "/projects/froso-park-hotell/HHL-NO4-02.jpg"
+    ]
+  },
+  {
+    "slug": "sunnersta",
+    "url": "https://www.hhl.se/projects/sunnersta/",
+    "images": [
+      "/projects/sunnersta/HHL-SUNNERSTA-002.jpg",
+      "/projects/sunnersta/HHL-SUNNERSTA-004.jpg",
+      "/projects/sunnersta/HHL-SUNNERSTA-012.jpg",
+      "/projects/sunnersta/HHL-SUNNERSTA-006.jpg",
+      "/projects/sunnersta/HHL-SUNNERSTA-008.jpg",
+      "/projects/sunnersta/HHL-NORRNAS-02.jpg",
+      "/projects/sunnersta/HHL-MYTTINGE-011.jpg"
+    ]
+  },
+  {
+    "slug": "skuru",
+    "url": "https://www.hhl.se/projects/skuru/",
+    "images": [
+      "/projects/skuru/HHL-SKURU-02.jpg",
+      "/projects/skuru/HHL-SKURU-10.jpg",
+      "/projects/skuru/HHL-SKURU-06.jpg",
+      "/projects/skuru/HHL-SKURU-04.jpg",
+      "/projects/skuru/HHL-SKURU-08.jpg",
+      "/projects/skuru/HHL-NORRNAS-02.jpg",
+      "/projects/skuru/HHL-MYTTINGE-011.jpg"
+    ]
+  },
+  {
+    "slug": "myttinge",
+    "url": "https://www.hhl.se/projects/myttinge/",
+    "images": [
+      "/projects/myttinge/HHL-MYTTINGE-011.jpg",
+      "/projects/myttinge/HHL-MYTTINGE-005.jpg",
+      "/projects/myttinge/HHL-MYTTINGE-010.jpg",
+      "/projects/myttinge/HHL-MYTTINGE-012.jpg",
+      "/projects/myttinge/HHL-MYTTINGE-004.jpg",
+      "/projects/myttinge/HHL-SKURU-02.jpg",
+      "/projects/myttinge/HHL-SUNNERSTA-002.jpg"
+    ]
+  },
+  {
+    "slug": "juniskar",
+    "url": "https://www.hhl.se/projects/juniskar/",
+    "images": [
+      "/projects/juniskar/HHL-JUNISKAR-01.jpg",
+      "/projects/juniskar/HHL-JUNISKAR-02.jpg",
+      "/projects/juniskar/HHL-JUNISKAR-05.jpg",
+      "/projects/juniskar/HHL-JUNISKAR-04.jpg",
+      "/projects/juniskar/HHL-JUNISKAR-12.jpg",
+      "/projects/juniskar/r-01.jpg",
+      "/projects/juniskar/HHL-SKURU-02.jpg"
+    ]
+  },
+  {
+    "slug": "norrnas",
+    "url": "https://www.hhl.se/projects/norrnas/",
+    "images": [
+      "/projects/norrnas/HHL-NORRNAS-02.jpg",
+      "/projects/norrnas/HHL-NORRNAS-06.jpg",
+      "/projects/norrnas/HHL-NORRNAS-12.jpg",
+      "/projects/norrnas/HHL-NORRNAS-08.jpg",
+      "/projects/norrnas/HHL-NORRNAS-03.jpg",
+      "/projects/norrnas/HHL-SKURU-02.jpg",
+      "/projects/norrnas/HHL-MYTTINGE-011.jpg"
+    ]
+  },
+  {
+    "slug": "arsta",
+    "url": "https://www.hhl.se/projects/arsta/",
+    "images": [
+      "/projects/arsta/AF-01.jpg",
+      "/projects/arsta/AF-02.jpg",
+      "/projects/arsta/AF-05.jpg",
+      "/projects/arsta/HHL-NO4-02.jpg",
+      "/projects/arsta/tr-01.jpg"
+    ]
+  },
+  {
+    "slug": "barkarby",
+    "url": "https://www.hhl.se/projects/barkarby/",
+    "images": [
+      "/projects/barkarby/BARKARBY-13.jpg",
+      "/projects/barkarby/BARKARBY-12.jpg",
+      "/projects/barkarby/BARKARBY-02.jpg",
+      "/projects/barkarby/BARKARBY-01.jpg",
+      "/projects/barkarby/tr-01.jpg",
+      "/projects/barkarby/HHL-NO4-02.jpg"
+    ]
+  },
+  {
+    "slug": "kalmar-central",
+    "url": "https://www.hhl.se/projects/kalmar-central/",
+    "images": [
+      "/projects/kalmar-central/KC-03.jpg",
+      "/projects/kalmar-central/KC-05.jpg",
+      "/projects/kalmar-central/KC-01.jpg",
+      "/projects/kalmar-central/KC-04.jpg",
+      "/projects/kalmar-central/KC-02.jpg",
+      "/projects/kalmar-central/HHL-NO4-02.jpg",
+      "/projects/kalmar-central/tr-01.jpg"
+    ]
+  }
+]
