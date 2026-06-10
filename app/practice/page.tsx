@@ -16,19 +16,19 @@ const competitions = [
 const exhibitions = ["‘Collective City’, Seoul Biennale of Architecture and Urbanism, Seoul, 2019", "‘Architecture Projects: Skeppsbron’, ArkDes, Stockholm, 2019", "’Public Luxury’, ArkDes, Stockholm, 2018", "‘In Therapy’, Nordic pavilion at the Architecture Biennale, Venice, 2016"];
 
 const lectures = [
-  "‘Architektur als Ressource’, Dortmunder Architekturtage 2022, Dortmund, Germany, 2022", "‘many levels of meaning and combinations of focus’, Halle A lecture series, OTH, Regensburg, Germany, 2022", "‘Hermansson Hiller Lundberg’, Oslo Association of Architects, Oslo, Norway, 2022", "‘Architecture on Stage: Hermansson Hiller Lundberg’, Architectural Foundation, London, UK, 2022", "‘Where we are’, Western Sydney University, Sydney, Australia, 2022", "‘More or Less’, TU München, Munich, Germany, 2022", "‘On facades’, London Metropolitan University, London, UK, 2021", "‘Order and Emotion’, Royal Academy of Arts, Stockholm, Sweden, 2020", "‘Current work’, Architectural Foundation, London, UK, 2020", "’Hermansson Hiller Lundberg’, Reihe Eins lecture series, TU Kaiserslautern, Kaiserslautern, Germany, 2020", "‘evokes many levels of meaning and combinations of focus’, Architectural Foundation, London, UK, 2020", "‘a living thing, asserting itself with ever-growing insistency’, Architectural Foundation, London, UK, 2020", "‘within each of them vault after vault opened endlessly’, Architectural Foundation, London, UK, 2020", "‘In Practice’, Kingston School of Art, London, UK, 2020", "‘Local Practice’, KTH Royal Institute of Technology, Stockholm, Sweden, 2018",
+  "‘Architektur als Ressource’, Dortmunder Architekturtage 2022, Dortmund, Germany, 2022", "‘many levels of meaning and combinations of focus’, Halle A lecture series, OTH, Regensburg, Germany, 2022", "‘Hermansson Hiller Lundberg’, Oslo Association of Architects, Oslo, Norway, 2022", "‘Architecture on Stage: Hermansson Hiller Lundberg’, Architectural Foundation, London, UK, 2022", "‘Where we are’, Western Sydney University, Sydney, Australia, 2022", "‘More or Less’, TU München, Munich, Germany, 2022", "‘On facades’, London Metropolitan University, London, UK, 2021", "‘Order and Emotion’, Royal Academy of Arts, Stockholm, Sweden, 2020", "‘Current work’, Architectural Foundation, London, UK, 2020", "’Hermansson Hiller Lundberg’, Reihe Eins lecture series, TU Kaiserslautern, Germany, 2020", "‘evokes many levels of meaning and combinations of focus’, Architectural Foundation, London, UK, 2020", "‘a living thing, asserting itself with ever-growing insistency’, Architectural Foundation, London, UK, 2020", "‘within each of them vault after vault opened endlessly’, Architectural Foundation, London, UK, 2020", "‘In Practice’, Kingston School of Art, London, UK, 2020", "‘Local Practice’, KTH Royal Institute of Technology, Stockholm, Sweden, 2018",
 ];
 
 const people = [
-  ["ANDREAS HERMANSSON", "Arkitekt SAR/MSA", "+46 (0)8 410 509 02", "+46 (0)70 428 38 83", "andreas.hermansson@hhl.se"],
-  ["ANDREAS HILLER", "Arkitekt SAR/MSA", "+46 (0)8 410 509 03", "+46 (0)73 987 27 52", "andreas.hiller@hhl.se"],
-  ["SAMUEL LUNDBERG", "Arkitekt SAR/MSA", "+46 (0)8 410 509 04", "+46 (0)70 313 51 12", "samuel.lundberg@hhl.se"],
-  ["FREDRIK EVENSEN", "", "", "", "fredrik.evensen@hhl.se"],
-  ["VERONICA FELTRE", "", "", "", "veronica.feltre@hhl.se"],
-  ["VERONICA GERINI", "", "", "", "veronica.gerini@hhl.se"],
-  ["MOA HANNERZ", "", "", "", "moa.hannerz@hhl.se"],
-  ["GODA LUKSAITE", "", "", "", "goda.luksaite@hhl.se"],
-  ["CLAUDIA TURIEL", "", "", "", "claudia.turiel@hhl.se"],
+  ["Andreas Hermansson", "Arkitekt SAR/MSA", "+46 (0)8 410 509 02", "+46 (0)70 428 38 83", "andreas.hermansson@hhl.se"],
+  ["Andreas Hiller", "Arkitekt SAR/MSA", "+46 (0)8 410 509 03", "+46 (0)73 987 27 52", "andreas.hiller@hhl.se"],
+  ["Samuel Lundberg", "Arkitekt SAR/MSA", "+46 (0)8 410 509 04", "+46 (0)70 313 51 12", "samuel.lundberg@hhl.se"],
+  ["Fredrik Evensen", "", "", "", "fredrik.evensen@hhl.se"],
+  ["Veronica Feltre", "", "", "", "veronica.feltre@hhl.se"],
+  ["Veronica Gerini", "", "", "", "veronica.gerini@hhl.se"],
+  ["Moa Hannerz", "", "", "", "moa.hannerz@hhl.se"],
+  ["Goda Luksaite", "", "", "", "goda.luksaite@hhl.se"],
+  ["Claudia Turiel", "", "", "", "claudia.turiel@hhl.se"],
 ];
 
 function ListBlock({ title, items }: { title: string; items: string[] }) {
@@ -62,8 +62,6 @@ export default function PracticePage() {
         </div>
       </section>
 
-      <img className="practice-wide-image practice-people-image" src="/projects/kompisen/ko-01.jpg" alt="HHL team" />
-
       <section className="people-list">
         {people.map(([name, role, phone, mobile, email]) => (
           <article key={name}>
@@ -75,9 +73,6 @@ export default function PracticePage() {
           </article>
         ))}
       </section>
-
-      <img className="practice-wide-image practice-library-image" src="/projects/rodeby/r-03.jpg" alt="HHL studio" />
-      <img className="practice-wide-image practice-archive-image" src="/projects/goteborgs-konstmuseum/aaa.jpg" alt="Archive" />
 
       <p className="practice-credit">Website by Morgan&amp;Hyland</p>
       <span className="page-counter">9</span>
