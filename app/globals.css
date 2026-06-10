@@ -370,21 +370,17 @@ body:has(.practice-page) {
   flex-direction: column;
   gap: 24px;
 }
-.practice-people-image { margin-top: 30px; }
 .people-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   column-gap: 74px;
   row-gap: 50px;
-  margin-top: 56px;
+  margin-top: 0;
   text-transform: none;
 }
 .people-list article { min-height: 80px; }
-.people-list article p:first-child { text-transform: uppercase; }
-.practice-library-image { margin-top: 78px; }
-.practice-archive-image { margin-top: 78px; }
 .practice-credit {
-  margin-top: 40px;
+  margin-top: 78px;
   text-align: center;
 }
 
