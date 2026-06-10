@@ -283,7 +283,9 @@ ul { margin: 0; padding: 0; list-style: none; }
 .practice-page p,
 .practice-page li,
 .practice-block h2,
-.practice-contact h2 {
+.practice-contact-card,
+.people-list,
+.practice-credit {
   margin: 0;
   font-size: 16px;
   line-height: 1.08;
@@ -300,16 +302,21 @@ ul { margin: 0; padding: 0; list-style: none; }
   width: 640px;
 }
 
-.practice-page { padding: 88px var(--page-x) 70px; }
+.practice-page {
+  padding: 44px var(--page-x) 72px;
+  min-height: 100vh;
+}
 .practice-top-image {
-  width: 235px;
+  width: 280px;
   height: auto;
-  margin: 0 auto 42px;
+  margin: 0 auto 34px;
 }
 .practice-intro,
 .practice-block,
-.practice-contact {
-  width: 500px;
+.practice-contact-card,
+.people-list,
+.practice-credit {
+  width: 410px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -317,35 +324,55 @@ ul { margin: 0; padding: 0; list-style: none; }
   display: flex;
   flex-direction: column;
   gap: 13px;
-  margin-bottom: 43px;
+  margin-bottom: 44px;
 }
 .practice-block {
   display: grid;
-  grid-template-columns: 145px 1fr;
-  gap: 24px;
-  margin-bottom: 34px;
+  grid-template-columns: 118px 1fr;
+  column-gap: 28px;
+  margin-bottom: 38px;
 }
-.practice-block h2,
-.practice-contact h2 { text-transform: uppercase; }
+.practice-block h2 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1.08;
+  font-weight: 400;
+}
 .practice-wide-image {
-  width: 320px;
+  width: 280px;
   height: auto;
-  margin: 70px auto 34px;
+  margin: 82px auto 28px;
 }
-.practice-contact {
+.practice-contact-card {
   display: grid;
-  grid-template-columns: 145px 1fr;
-  gap: 14px 24px;
+  grid-template-columns: 118px 1fr;
+  column-gap: 28px;
+  margin-bottom: 54px;
 }
-.practice-contact > p { grid-column: 2; }
+.practice-office-name { text-transform: uppercase; }
+.practice-address {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.practice-people-image { margin-top: 28px; }
 .people-list {
-  grid-column: 2;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 34px 70px;
-  margin-top: 36px;
+  column-gap: 74px;
+  row-gap: 48px;
+  margin-top: 54px;
+  text-transform: none;
 }
-.people-list article { min-height: 92px; }
+.people-list article { min-height: 80px; }
+.people-list article p:first-child { text-transform: uppercase; }
+.practice-library-image { margin-top: 76px; }
+.practice-archive-image { margin-top: 76px; }
+.practice-credit {
+  margin-top: 38px;
+  text-align: center;
+}
 
 @media (max-width: 1600px) {
   :root { --page-x: 124px; --page-y: 68px; --thumb: 300px; --gap-x: 145px; --gap-y: 120px; --project-thumb: 440px; --detail-width: 470px; --detail-gap: 116px; }
@@ -353,10 +380,11 @@ ul { margin: 0; padding: 0; list-style: none; }
   .project-card-image { min-height: 300px; }
   .project-page { padding-top: 66px; }
   .project-title-block { width: 360px; margin-bottom: 42px; }
+  .practice-page { padding-top: 38px; }
 }
 
 @media (max-width: 900px) {
-  :root { --page-x: 22px; --page-y: 24px; --header-mask-height: 82px; --thumb: 230px; --gap-x: 40px; --gap-y: 65px; --project-thumb: 100%; --detail-width: 100%; --detail-gap: 65px; }
+  :root { --page-x: 78px; --page-y: 32px; --header-mask-height: 82px; --thumb: 230px; --gap-x: 40px; --gap-y: 65px; --project-thumb: 100%; --detail-width: 100%; --detail-gap: 65px; }
   body, .site-header, .home-counter, .page-counter { font-size: 13px; }
   .home-scroll { grid-template-columns: 1fr; padding-top: 118px; }
   .projects-list { grid-template-columns: 1fr; padding-top: 118px; }
@@ -371,17 +399,20 @@ ul { margin: 0; padding: 0; list-style: none; }
   .news-feature,
   .news-feature img,
   .news-feature p,
-  .news-meta,
-  .practice-intro,
-  .practice-block,
-  .practice-contact { width: 100%; }
+  .news-meta { width: 100%; }
   .project-image img { max-width: 100%; }
   .related-list { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 28px; }
   .related-card,
   .related-card img { width: 100%; }
+  .practice-page { padding-top: 26px; }
+  .practice-top-image,
+  .practice-wide-image { width: 280px; max-width: 100%; }
+  .practice-intro,
   .practice-block,
-  .practice-contact { grid-template-columns: 1fr; gap: 14px; }
-  .practice-contact > p,
-  .people-list { grid-column: 1; }
-  .people-list { grid-template-columns: 1fr; }
+  .practice-contact-card,
+  .people-list,
+  .practice-credit { width: 410px; max-width: 100%; }
+  .practice-block,
+  .practice-contact-card { grid-template-columns: 118px 1fr; column-gap: 28px; }
+  .people-list { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 54px; }
 }
