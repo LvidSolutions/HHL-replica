@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { galleryImages, getProjectMeta, projectNumber, projects } from "../lib/projects";
 
@@ -12,8 +11,8 @@ export default function Home() {
 
           return (
             <Link className="home-hero" href={`/projects/${project.slug}`} key={project.slug}>
-              <Image src={image} alt={meta.title} fill sizes="100vw" priority={index === 0} />
-              <span className="home-counter">{projectNumber(project.slug, index)}</span>
+              <img src={image} alt={meta.title} loading={index < 6 ? "eager" : "lazy"} />
+              {index === 0 ? <span className="home-counter">{projectNumber(project.slug, index)}</span> : null}
             </Link>
           );
         })}
