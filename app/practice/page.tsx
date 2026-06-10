@@ -23,29 +23,63 @@ const people = [
   ["ANDREAS HERMANSSON", "Arkitekt SAR/MSA", "+46 (0)8 410 509 02", "+46 (0)70 428 38 83", "andreas.hermansson@hhl.se"],
   ["ANDREAS HILLER", "Arkitekt SAR/MSA", "+46 (0)8 410 509 03", "+46 (0)73 987 27 52", "andreas.hiller@hhl.se"],
   ["SAMUEL LUNDBERG", "Arkitekt SAR/MSA", "+46 (0)8 410 509 04", "+46 (0)70 313 51 12", "samuel.lundberg@hhl.se"],
-  ["FREDRIK EVENSEN", "", "", "", "fredrik.evensen@hhl.se"], ["VERONICA FELTRE", "", "", "", "veronica.feltre@hhl.se"], ["VERONICA GERINI", "", "", "", "veronica.gerini@hhl.se"], ["MOA HANNERZ", "", "", "", "moa.hannerz@hhl.se"], ["GODA LUKSAITE", "", "", "", "goda.luksaite@hhl.se"], ["CLAUDIA TURIEL", "", "", "", "claudia.turiel@hhl.se"],
+  ["FREDRIK EVENSEN", "", "", "", "fredrik.evensen@hhl.se"],
+  ["VERONICA FELTRE", "", "", "", "veronica.feltre@hhl.se"],
+  ["VERONICA GERINI", "", "", "", "veronica.gerini@hhl.se"],
+  ["MOA HANNERZ", "", "", "", "moa.hannerz@hhl.se"],
+  ["GODA LUKSAITE", "", "", "", "goda.luksaite@hhl.se"],
+  ["CLAUDIA TURIEL", "", "", "", "claudia.turiel@hhl.se"],
 ];
 
 function ListBlock({ title, items }: { title: string; items: string[] }) {
-  return <section className="practice-block"><h2>{title}</h2><ul>{items.map((item) => <li key={item}>{item}</li>)}</ul></section>;
+  return (
+    <section className="practice-block">
+      <h2>{title}</h2>
+      <ul>{items.map((item) => <li key={item}>{item}</li>)}</ul>
+    </section>
+  );
 }
 
 export default function PracticePage() {
   return (
     <main className="practice-page text-page">
-      <img className="practice-top-image" src="/projects/skuru/HHL-SKURU-02.jpg" alt="Practice" />
+      <img className="practice-top-image" src="/projects/skuru/HHL-SKURU-04.jpg" alt="Practice" />
+
       <section className="practice-intro">{intro.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</section>
+
       <ListBlock title="DISTINCTIONS" items={distinctions} />
       <ListBlock title="COMPETITIONS" items={competitions} />
       <ListBlock title="EXHIBITIONS" items={exhibitions} />
       <ListBlock title="LECTURES" items={lectures} />
-      <img className="practice-wide-image" src="/projects/karrtorp/tr-01.jpg" alt="Office" />
-      <section className="practice-contact">
-        <h2>HERMANSSON HILLER LUNDBERG ARKITEKTER AB</h2>
-        <p>Åsögatan 142<br />116 24 Stockholm</p>
-        <p>+46 (0)8 410 509 00<br />info@hhl.se</p>
-        <div className="people-list">{people.map(([name, role, phone, mobile, email]) => <article key={name}><p>{name}</p>{role ? <p>{role}</p> : null}{phone ? <p>{phone}</p> : null}{mobile ? <p>{mobile}</p> : null}<p>{email}</p></article>)}</div>
+
+      <img className="practice-wide-image" src="/projects/karrtorp/tr-01.jpg" alt="HHL office" />
+
+      <section className="practice-contact-card">
+        <div className="practice-office-name">HERMANSSON HILLER LUNDBERG ARKITEKTER AB</div>
+        <div className="practice-address">
+          <p>Åsögatan 142<br />116 24 Stockholm</p>
+          <p>+46 (0)8 410 509 00<br />info@hhl.se</p>
+        </div>
       </section>
+
+      <img className="practice-wide-image practice-people-image" src="/projects/kompisen/ko-01.jpg" alt="HHL team" />
+
+      <section className="people-list">
+        {people.map(([name, role, phone, mobile, email]) => (
+          <article key={name}>
+            <p>{name}</p>
+            {role ? <p>{role}</p> : null}
+            {phone ? <p>{phone}</p> : null}
+            {mobile ? <p>{mobile}</p> : null}
+            <p>{email}</p>
+          </article>
+        ))}
+      </section>
+
+      <img className="practice-wide-image practice-library-image" src="/projects/rodeby/r-03.jpg" alt="HHL studio" />
+      <img className="practice-wide-image practice-archive-image" src="/projects/goteborgs-konstmuseum/aaa.jpg" alt="Archive" />
+
+      <p className="practice-credit">Website by Morgan&amp;Hyland</p>
       <span className="page-counter">9</span>
     </main>
   );
