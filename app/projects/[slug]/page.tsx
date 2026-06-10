@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { galleryImages, getProject, getProjectMeta, projectNumber, projects, relatedProjects } from "../../../lib/projects";
+import { galleryImages, getProject, getProjectMeta, projects, relatedProjects } from "../../../lib/projects";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -22,31 +22,14 @@ export default async function ProjectPage({ params }: Props) {
   if (!project) notFound();
 
   const meta = getProjectMeta(project.slug);
-  const index = projects.findIndex((item) => item.slug === project.slug);
   const gallery = galleryImages(project);
   const related = relatedProjects(project.slug, 2);
 
   return (
     <main className="project-page">
-      <section className="project-top">
-        <div className="project-intro">
-          <h1>{meta.title}</h1>
-          <p>{meta.category}</p>
-          <p>{meta.location}</p>
-          {meta.year ? <p>{meta.year}</p> : null}
-        </div>
-        <div className="project-copy">
-          {meta.description.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-          {meta.awards?.length ? (
-            <div className="project-facts">
-              {meta.awards.map((award) => <p key={award}>{award}</p>)}
-            </div>
-          ) : null}
-          {meta.photography ? <p className="project-photo">Photography: {meta.photography}</p> : null}
-        </div>
-      </section>
+      <header className="project-title-block">
+        <h1>{meta.title}</h1>
+      </header>
 
       <section className="project-gallery" aria-label={`${meta.title} images`}>
         {gallery.map((image, imageIndex) => (
@@ -56,10 +39,24 @@ export default async function ProjectPage({ params }: Props) {
         ))}
       </section>
 
+      <section className="project-top">
+        <div className="project-intro">
+          {meta.location ? <p>{meta.location}</p> : null}
+          {meta.category ? <p>{meta.category}</p> : null}
+          {meta.year ? <p>{meta.year}</p> : null}
+        </div>
+        <div className="project-copy">
+          {meta.description.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+          {meta.awards?.length ? <div className="project-facts">{meta.awards.map((award) => <p key={award}>{award}</p>)}</div> : null}
+        </div>
+      </section>
+
       <section className="related-projects">
         <h2>Related Projects</h2>
         <div className="related-list">
-          {related.map((item, relatedIndex) => {
+          {related.map((item) => {
             const relatedMeta = getProjectMeta(item.slug);
             const [cover] = galleryImages(item);
             return (
@@ -69,7 +66,6 @@ export default async function ProjectPage({ params }: Props) {
                 </div>
                 <div className="project-card-title">
                   <span>{relatedMeta.title}</span>
-                  <span>{projectNumber(item.slug, index + relatedIndex + 1)}</span>
                 </div>
               </Link>
             );
