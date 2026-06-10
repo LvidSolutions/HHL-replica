@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { galleryImages, getProjectMeta, projects } from "../../lib/projects";
 
@@ -9,12 +8,12 @@ export default function ProjectsPage() {
       <section className="projects-list" aria-label="Projects">
         {projects.map((project, index) => {
           const meta = getProjectMeta(project.slug);
-          const [cover] = galleryImages(project);
+          const cover = galleryImages(project)[0];
 
           return (
             <Link className="project-card" href={`/projects/${project.slug}`} key={project.slug}>
               <div className="project-card-image">
-                <Image src={cover} alt={meta.title} fill sizes="(max-width: 780px) 100vw, 50vw" priority={index < 4} />
+                <img src={cover} alt={meta.title} loading={index < 6 ? "eager" : "lazy"} />
               </div>
               <div className="project-card-title">
                 <span className="project-card-name">{meta.title}</span>
