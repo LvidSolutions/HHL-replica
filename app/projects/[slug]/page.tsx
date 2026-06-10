@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { galleryImages, getProject, getProjectMeta, projectNumber, projects, relatedProjects } from "../../../lib/projects";
+import { galleryImages, getProject, getProjectMeta, projects, relatedProjects } from "../../../lib/projects";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -21,23 +21,27 @@ export default async function ProjectPage({ params }: Props) {
   if (!project) notFound();
 
   const meta = getProjectMeta(project.slug);
-  const [heroImage] = galleryImages(project);
+  const gallery = galleryImages(project);
   const related = relatedProjects(project.slug, 2);
 
   return (
     <main className="project-page">
-      {heroImage ? (
-        <figure className="project-hero-image">
-          <img src={heroImage} alt={meta.title} loading="eager" />
-        </figure>
-      ) : null}
+      <header className="project-title-block">
+        <h1>{meta.title}</h1>
+        {meta.location ? <p>{meta.location}</p> : null}
+        {meta.category ? <p>{meta.category}</p> : null}
+        {meta.year ? <p>{meta.year}</p> : null}
+      </header>
 
-      <section className="project-info">
-        <div className="project-intro">
-          {meta.location ? <p>{meta.location}</p> : null}
-          {meta.category ? <p>{meta.category}</p> : null}
-          {meta.year ? <p>{meta.year}</p> : null}
-        </div>
+      <section className="project-gallery" aria-label={`${meta.title} images`}>
+        {gallery.map((image, imageIndex) => (
+          <figure className="project-image" key={`${image}-${imageIndex}`}>
+            <img src={image} alt={`${meta.title} ${imageIndex + 1}`} loading={imageIndex === 0 ? "eager" : "lazy"} />
+          </figure>
+        ))}
+      </section>
+
+      <section className="project-text-block">
         <div className="project-copy">
           {meta.description.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
@@ -52,16 +56,15 @@ export default async function ProjectPage({ params }: Props) {
         <div className="related-list">
           {related.map((item) => {
             const relatedMeta = getProjectMeta(item.slug);
+            const [cover] = galleryImages(item);
             return (
-              <Link href={`/projects/${item.slug}`} className="related-card" key={item.slug}>
-                {relatedMeta.title}
+              <Link href={`/projects/${item.slug}`} className="related-card" key={item.slug} aria-label={relatedMeta.title}>
+                <img src={cover} alt={relatedMeta.title} loading="lazy" />
               </Link>
             );
           })}
         </div>
       </section>
-
-      <span className="project-page-number">{projectNumber(project.slug)}</span>
     </main>
   );
 }
