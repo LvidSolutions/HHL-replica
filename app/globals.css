@@ -5,6 +5,7 @@
   --fg: #111;
   --page-x: 124px;
   --page-y: 68px;
+  --header-mask-height: 170px;
   --thumb: 380px;
   --gap-x: 185px;
   --gap-y: 150px;
@@ -83,7 +84,23 @@ ul { margin: 0; padding: 0; list-style: none; }
   white-space: nowrap;
 }
 
-.home-page { min-height: 100vh; background: #fff; }
+.home-page,
+.projects-page {
+  min-height: 100vh;
+  background: #fff;
+}
+.home-page::before,
+.projects-page::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-mask-height);
+  z-index: 95;
+  background: #fff;
+  pointer-events: none;
+}
 .home-scroll {
   display: grid;
   grid-template-columns: repeat(3, var(--thumb));
@@ -110,7 +127,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .home-counter,
 .page-counter {
   position: fixed;
-  z-index: 90;
+  z-index: 96;
   left: var(--page-x);
   bottom: 42px;
   color: #000;
@@ -119,7 +136,6 @@ ul { margin: 0; padding: 0; list-style: none; }
   font-weight: 400;
 }
 
-.projects-page { min-height: 100vh; }
 .projects-list {
   display: grid;
   grid-template-columns: repeat(2, var(--project-thumb));
@@ -338,7 +354,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 
 @media (max-width: 900px) {
-  :root { --page-x: 22px; --page-y: 24px; --thumb: 230px; --gap-x: 40px; --gap-y: 65px; --project-thumb: 100%; --detail-width: 100%; --detail-gap: 65px; }
+  :root { --page-x: 22px; --page-y: 24px; --header-mask-height: 82px; --thumb: 230px; --gap-x: 40px; --gap-y: 65px; --project-thumb: 100%; --detail-width: 100%; --detail-gap: 65px; }
   body, .site-header, .home-counter, .page-counter { font-size: 13px; }
   .home-scroll { grid-template-columns: 1fr; padding-top: 118px; }
   .projects-list { grid-template-columns: 1fr; padding-top: 118px; }
