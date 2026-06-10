@@ -11,7 +11,9 @@ function Header() {
   return (
     <header className="site-header">
       <Link href="/" className="brand" aria-label="HERMANSSON HILLER LUNDBERG">
-        HERMANSSON HILLER LUNDBERG
+        <span>HERMANSSON</span>
+        <span>HILLER</span>
+        <span>LUNDBERG</span>
       </Link>
       <nav className="site-nav" aria-label="Main navigation">
         <Link href="/projects">PROJECTS</Link>
