@@ -29,20 +29,27 @@ const visualScaleOverrides = `
   .practice-contact-card,
   .people-list,
   .practice-credit {
-    font-size: 18px !important;
+    font-size: 24px !important;
+  }
+
+  .site-header {
+    line-height: 1.03 !important;
   }
 
   body:has(.home-page),
   body:has(.projects-page) {
-    --page-y: 44px;
-    --thumb: 430px;
-    --gap-x: 190px;
-    --gap-y: 160px;
-    --header-mask-height: 132px;
+    --page-x: 17px;
+    --page-y: 17px;
+    --thumb: 470px;
+    --gap-x: 235px;
+    --gap-y: 170px;
+    --header-mask-height: 126px;
   }
 
   .home-scroll {
-    padding-top: 150px !important;
+    padding-top: 252px !important;
+    padding-left: 17px !important;
+    padding-right: 17px !important;
   }
 
   .home-hero,
@@ -55,25 +62,28 @@ const visualScaleOverrides = `
   @media (max-width: 1600px) {
     body:has(.home-page),
     body:has(.projects-page) {
-      --page-y: 42px;
+      --page-x: 15px;
+      --page-y: 15px;
       --thumb: 340px;
-      --gap-x: 155px;
+      --gap-x: 150px;
       --gap-y: 130px;
-      --header-mask-height: 118px;
+      --header-mask-height: 104px;
     }
 
     .home-scroll {
-      padding-top: 145px !important;
+      padding-top: 188px !important;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
     }
   }
 
   @media (max-width: 900px) {
     body:has(.home-page),
     body:has(.projects-page) {
-      --page-x: clamp(28px, 8.75vw, 78px);
-      --page-y: clamp(16px, 4.7vw, 30px);
-      --thumb: clamp(70px, 22vw, 170px);
-      --gap-x: clamp(32px, 10vw, 68px);
+      --page-x: clamp(8px, 3vw, 18px);
+      --page-y: clamp(8px, 3vw, 18px);
+      --thumb: clamp(70px, 24vw, 170px);
+      --gap-x: clamp(32px, 11vw, 70px);
       --gap-y: clamp(54px, 17vw, 104px);
       --header-mask-height: clamp(58px, 18vw, 100px);
     }
@@ -99,12 +109,14 @@ const visualScaleOverrides = `
     .practice-contact-card,
     .people-list,
     .practice-credit {
-      font-size: clamp(9px, 2.8vw, 15px) !important;
+      font-size: clamp(10px, 3.2vw, 16px) !important;
     }
 
     .home-scroll {
       grid-template-columns: repeat(3, var(--thumb)) !important;
-      padding-top: clamp(72px, 23vw, 138px) !important;
+      padding-top: clamp(82px, 26vw, 148px) !important;
+      padding-left: var(--page-x) !important;
+      padding-right: var(--page-x) !important;
     }
   }
 `;
