@@ -2,7 +2,7 @@ const item = {
   title: "GÖTEBORGS KONSTMUSEUM",
   excerpt: "1st prize, competition for the extension to the Gothenburg Museum of Art, Barozzi Veiga and Hermansson Hiller Lundberg with landscape by Peter Korn...",
   date: "28 MAR 2024",
-  image: "/projects/goteborgs-konstmuseum/tr-01.jpg",
+  image: "/projects/goteborgs-konstmuseum/ccc.jpg",
 };
 
 export default function NewsPage() {
